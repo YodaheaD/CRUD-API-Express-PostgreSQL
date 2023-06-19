@@ -5,7 +5,7 @@
 
 - This project contains a CRUD API that interacts with a PostgreSQL database. 
 - Both parts are in Docker containers and can run simultaneously with the 'docker-compose' tool.
-![MyImage](/images/ProjectStructure.jpg)
+
 
 
 #### Goals for project:
@@ -19,7 +19,8 @@
 
 1. Build the Express Api's dockerfile
     - "docker build -t API_CONTAINER_NAME ."
-
+    ** NOTE: Don't forget the period after.
+    
 2. Run docker-compose file
     - "docker-compose up"
 
@@ -71,5 +72,18 @@
 
 * CORS or Cross-Origin Resource Sharing in Node. js is a mechanism by which a front-end client can make requests for resources to an external back-end server. 
 * The single-origin policy does not allow cross-origin requests and CORS headers are required to bypass this feature.
+
+
+### Versions List 
+
+##### 1.0 <-> Initial Release
+- API performs Add, view, and delete functions for data in a Postgres Database Table.
+- Table: 'items' holds product information for a companies repository. 
+- Future Improvement: create class for interacting with DB to make code more efficient, adding authentication or caching. 
+
+##### 1.1 <-> Table Class Release
+- API now has generic class that contains function for adding, viewing, and deleting data from Postgres DB table called 'tablelike.ts. 
+- Table like generic class: 'createTable()', 'addToDb()', 'deleteFromDb()','getAllData()', 'getDataWId()'.
+- Future Improvement: Authentication to routes, caching data, more efficient coding.
 
 
